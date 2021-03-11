@@ -9,8 +9,8 @@ LIB_DIRS = [
 $CFLAGS << ' -Wall' if ENV['WALL']
 $LDFLAGS << ' -static-libgcc' if RUBY_PLATFORM =~ /cygwin|mingw|mswin/
 
-dir_config('magic', HEADER_DIRS, LIB_DIRS)
-dir_config('gnurx', HEADER_DIRS, LIB_DIRS)
+#dir_config('magic', HEADER_DIRS, LIB_DIRS)
+#dir_config('gnurx', HEADER_DIRS, LIB_DIRS)
 
 have_library('gnurx')
 
