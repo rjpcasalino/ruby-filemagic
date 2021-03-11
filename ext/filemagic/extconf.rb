@@ -1,15 +1,9 @@
 require 'mkmf'
-
+# see: https://nixos.wiki/wiki/Ruby#Trouble_with_native_dependencies
 HEADER_DIRS = [
-  '/opt/local/include', # MacPorts
-  '/usr/local/include', # compiled from source and Homebrew
-  '/usr/include',       # system
 ]
 
 LIB_DIRS = [
-  '/opt/local/lib', # MacPorts
-  '/usr/local/lib', # compiled from source and Homebrew
-  '/usr/lib',       # system
 ]
 
 $CFLAGS << ' -Wall' if ENV['WALL']
