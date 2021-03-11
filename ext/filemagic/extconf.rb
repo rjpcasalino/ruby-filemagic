@@ -14,10 +14,6 @@ $CFLAGS << ' -Wall' if ENV['WALL']
 
 #have_library('gnurx')
 
-if have_library('magic', 'magic_open') && have_header('magic.h')
-  have_func('magic_version')
-  have_header('file/patchlevel.h')
-  create_makefile('filemagic/ruby_filemagic')
-else
-  abort '*** ERROR: missing required library to compile this module'
-end
+have_func('magic_version')
+have_header('file/patchlevel.h')
+create_makefile('filemagic/ruby_filemagic')
